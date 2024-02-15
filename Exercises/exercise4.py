@@ -23,15 +23,33 @@ print(checking)
 # Using count() function
 exist_count = lst.count(3)
 if exist_count > 0 :
-   print("Number 3 exusts in list")
+   print("Number 3 exist in list")
 
-print ([[num, lst.count(num)] for num in set(lst)])
+# print ([[num, lst.count(num)] for num in set(lst)])
 
 # Using sort with bisect_left and set()
-sort_lst = lst.sort()
-print(set(sort_lst))
+
 # Using find() method
+lst_of_str = list(map(str, lst))
+new_str = " ".join(lst_of_str)
+if new_str.find("3") != -1 :
+   print("Number 3 exist in list")
+else:
+   print("Number 3 not exist in list")   
 
 # Using Counter() function
+from collections import Counter
+new_dict = Counter(lst)
+if new_dict[3] > 0 :
+      print("Number 3 exist in list")
+else:
+   print("Number 3 not exist in list")   
 
 # Using try-except block
+def exist_element(list, element):
+   try :
+      list.index(element)
+      return True
+   except ValueError :
+      return False
+print(exist_element(lst, 7))
