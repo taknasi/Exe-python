@@ -27,5 +27,16 @@ for num in lst:
 print(new_lst)
 
 # Using list comprehension
+lst = [4, 5, 6, 7, 8, 9]
+new_list = [lst[len(lst) - i] for i in range(1, len(lst)+1)]
+print(new_list)
+
+  # for i in range(1, len(lst + 1))
+  # new_lst = [lst[len(lst) - 1]]
+  # new_lst = [lst[len(lst) - 2]]
+  # new_lst = [lst[len(lst) - 3]]
+  # new_lst = [lst[len(lst) - 4]]
+ # new_lst = [lst[len(lst) - 5]]
+  # new_lst = [lst[len(lst) - 6]]
 
 # Reversing a list using Numpy
